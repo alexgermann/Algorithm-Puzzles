@@ -1,3 +1,5 @@
+// Problem: https://www.algoexpert.io/questions/River%20Sizes
+
 function riverSizes(matrix) {
   let trackerArray = [];
   let riverArray = [];
@@ -22,10 +24,11 @@ function computeSize(matrix, trackerArr, x, y) {
   let size = 0;
   try {
     if (trackerArr[x][y] === 1) {
-      // already computed
+      // Already computed node
       return 0;
     }
     size = matrix[x][y];
+    // Mark node as computed
     trackerArr[x][y] = 1;
   } catch (err) {
     // index out of bounds - too lazy to check
