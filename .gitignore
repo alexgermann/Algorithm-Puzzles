@@ -5,3 +5,8 @@
 /LongestConsecutiveSubsequence/obj
 /LongestConsecutiveSubsequence/bin/Debug/netcoreapp3.1
 /LongestConsecutiveSubsequence/.vs/LongestConsecutiveSubsequence
+
+*/obj
+*/bin
+*/.vs
+*/.vscode
