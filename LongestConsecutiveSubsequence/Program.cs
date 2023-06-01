@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1
+namespace LongestConsecutiveSubsequence
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] testInput = new int[] { 100, 4, 200, 1, 3, 2 };
-            //testInput = new int[] { 8, 100, 4, 200, 1, 3, 2, 5, 6, 7, 99, 101, 102, 103, 104, 106, 105, 109, 108, 107 };
+            //testInput = new int[] { 8, 100, 4, 200, 1, 3, 2, 5, 6, 7, 99, 101, 102, 103, 104, 106, 105 };
 
             var length = GetLongestSubsequenceLength(testInput);
-            Console.WriteLine($"Longest consecutive element sequence is length {length}");
+            Console.WriteLine("<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>");
+            Console.WriteLine($"| Longest consecutive element sequence is length {length} |");
+            Console.WriteLine("<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>:<:>");
         }
 
         public static int GetLongestSubsequenceLength(int[] input)
