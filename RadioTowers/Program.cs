@@ -25,13 +25,18 @@ towerLocations = [10];
 TestRadioTowerMinimumDistance(listenerLocations, towerLocations);
 
 // Test minimum distance with one listener and multiple towers
-listenerLocations = [1];
+listenerLocations = [10];
 towerLocations = [4, 8, 15];
 TestRadioTowerMinimumDistance(listenerLocations, towerLocations);
 
 // Test minimum distance with multiple listeners and one tower
 listenerLocations = [1, 5, 11, 15];
 towerLocations = [5];
+TestRadioTowerMinimumDistance(listenerLocations, towerLocations);
+
+// Test identical listener and tower locations
+listenerLocations = [1, 5, 11, 20];
+towerLocations = [1, 5, 11, 20];
 TestRadioTowerMinimumDistance(listenerLocations, towerLocations);
 
 //// Test bad data
@@ -76,7 +81,7 @@ int GetMinimumTowerDistance(List<int> listenerLocations, List<int> towerLocation
                 break;
             }
         }
-        // If the distance to current listener is greater than the current minimum, update the minimum
+        // If the minimum distance to current listener is greater than the current minimum, update the minimum
         minimumDistance = Math.Max(minimumDistance, currentTowerDistance);
     }
     return minimumDistance;
